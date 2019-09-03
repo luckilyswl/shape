@@ -2,8 +2,6 @@
 自定义样式
 
 
-Shape样式
-
 shape的6种特性：
 <img src="5445868-6ce6de5f5d971e71.png" width="988" height="788" border="0" alt="">
 
