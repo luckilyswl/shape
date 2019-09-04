@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/layout"
     tools:context=".MainActivity">
 
 
@@ -183,5 +184,121 @@
            android:text="记好账号密码，以免遗忘"/>
 
    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_yangshi1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="有边框"
+            android:background="@drawable/yangshi_1"/>
+
+        <Button
+            android:id="@+id/btn_yangshi2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有边框"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/yangshi_1_1"/>
+
+        <!--TODO：需要传值，要不会导致只显示一块-->
+        <com.qingshangzuo.shape_demo.DrawableButton
+            android:id="@+id/btn_yangshi3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="有边框+icon"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="230dp"
+            android:drawableLeft="@android:drawable/stat_sys_phone_call_forward"
+            android:background="@drawable/yangshi_1_1_1"/>
+
+        <!--TODO：相当于定于一个可以点击的button,需要到对应的Activity 设置点击效果-->
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btn_yangshi3"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/yangshi_1_1_1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:src="@android:drawable/stat_sys_phone_call_forward"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                android:text="边框 + icon"/>
+
+        </LinearLayout>
+
+        <!--layout_below：在哪个id的下方-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="无边框"
+            android:id="@+id/btn_yangshi1_1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/btn_yangshi1"
+            android:background="@drawable/yangshi_2"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="120dp"
+            android:text="方形有边框"
+            android:background="@drawable/yangshi_1_1"
+            android:layout_below="@id/btn_yangshi2"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="圆形无边框"
+            android:background="@drawable/yangshi_2"
+            android:layout_below="@id/btn_yangshi1_1"/>
+
+
+        <com.qingshangzuo.shape_demo.DrawableButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/layout_button"
+            android:id="@+id/btn_yangshi3_1"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="230dp"
+            android:drawableLeft="@android:drawable/stat_sys_phone_call_forward"
+            android:background="@drawable/yangshi_1_1_1"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/btn_yangshi3_1"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="230dp"
+            android:text="居中"
+            android:textAlignment="center"
+            android:background="@drawable/yangshi_1_1_1"/>
+
+    </RelativeLayout>
 
 </LinearLayout>
